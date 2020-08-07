@@ -51,8 +51,8 @@
 .icon-linkedin:before {
   content: "\f0e1";
 } /* '' */
-.icon-linkedin:before {
-  content: "\f0e1";
+.icon-thumbs-up:before {
+  content: "\f164";
 } /* '' */
 .icon-up:before {
   content: "\f176";
@@ -226,6 +226,7 @@ body {
   height: 50px;
   width: 50px;
 }
+
 
 /* HERO
 ================================================== */
@@ -596,6 +597,9 @@ a.gplus-bg:hover {
 a.linkedin-bg:hover {
   color: #dd4b39;
 }
+a.thumbs-up-bg:hover{
+  color: #6f4a8e;
+}
 a.icon-up-bg:hover {
   color: #212121;
 }
@@ -605,4 +609,9 @@ a.icon-up-bg:hover {
   line-height: 40px;
   color: #fff;
   text-align: center;
+}
+
+#like-button {
+  position: absolute;
+  visibility: hidden;
 }
