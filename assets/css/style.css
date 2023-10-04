@@ -227,7 +227,6 @@ body {
   width: 50px;
 }
 
-
 /* HERO
 ================================================== */
 .hero {
@@ -387,6 +386,7 @@ body {
   height: 230px;
   margin-bottom: 30px;
   position: relative;
+  border: 1px solid rgba(200, 200, 200, 0.7);
 }
 
 .section-portfolio .col-md-4:nth-last-child(-n + 3) .portfolio-item {
@@ -597,7 +597,7 @@ a.gplus-bg:hover {
 a.linkedin-bg:hover {
   color: #dd4b39;
 }
-a.thumbs-up-bg:hover{
+a.thumbs-up-bg:hover {
   color: #6f4a8e;
 }
 a.icon-up-bg:hover {
@@ -614,4 +614,190 @@ a.icon-up-bg:hover {
 #like-button {
   position: absolute;
   visibility: hidden;
+}
+
+/* Contact Section */
+/* .shareArticle */
+.shareArticle {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+}
+
+/* .shareSocial */
+.shareSocial {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .shareSocial {
+    flex-flow: column;
+  }
+}
+
+/* .socialTitle */
+.socialTitle {
+  margin: 0 15px 0 0;
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .socialTitle {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+
+/* .socialList */
+.socialList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.socialList li {
+  margin: 5px;
+}
+
+.socialList li:first-child {
+  padding-left: 0;
+}
+
+.socialList li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  text-decoration: none;
+  background-color: #999;
+  color: #fff;
+  transition: 0.35s;
+}
+
+.socialList li a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: top left;
+  transform: scale(1) translate(-50%, -50%);
+  transition: 0.35s;
+}
+
+.socialList li a:hover i {
+  transform: scale(1.5) translate(-50%, -50%);
+}
+
+.socialList li:nth-child(1) a {
+  background-color: #111111;
+}
+
+.socialList li:nth-child(2) a {
+  background-color: #1fb381;
+}
+
+.socialList li:nth-child(3) a {
+  background-color: #135cb6;
+}
+
+/* .socialList li:nth-child(4) a {
+  background-color: #00aced;
+}
+
+.socialList li:nth-child(5) a {
+  background-color: #bd081c;
+} */
+
+/* .shareLink */
+
+.shareLink {
+  margin-bottom: 30px;
+}
+
+.shareLink > p {
+  margin: 0 !important;
+  text-align: start;
+  padding: 10px !important;
+}
+
+.shareLink .permalink {
+  position: relative;
+  border-radius: 30px;
+}
+
+.shareLink .permalink .textLink {
+  text-align: center;
+  padding: 12px 60px 12px 30px;
+  height: 45px;
+  width: 450px;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  color: #494949;
+  border-radius: 25px;
+  border: 1px solid #f2f2f2;
+  background-color: #f2f2f2;
+  outline: 0;
+  appearance: none;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 767px) {
+  .shareLink .permalink .textLink {
+    width: 100%;
+  }
+}
+
+.shareLink .permalink .textLink:focus {
+  border-color: #d8d8d8;
+}
+
+.shareLink .permalink .textLink::selection {
+  color: #fff;
+  background-color: #ff0a4b;
+}
+
+.shareLink .permalink .copyLink {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.shareLink .permalink .copyLink:hover::after {
+  opacity: 1;
+  transform: translateY(0) translateX(-50%);
+}
+
+.shareLink .permalink .copyLink::after {
+  content: attr(tooltip);
+  width: 140px;
+  bottom: -40px;
+  left: 50%;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  background-color: #000000;
+  color: #ffffff;
+  transform: translateY(-10px) translateX(-50%);
+  transition: all 300ms ease;
+  text-align: center;
+}
+
+.shareLink .permalink .copyLink i {
+  font-size: 20px;
+  color: #ff0a4b;
 }
